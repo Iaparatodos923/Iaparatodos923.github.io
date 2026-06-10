@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ia Para Todos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <title>Proyecto Cascajal – Inteligencia Artificial</title>
+    <link rel="icon" type="image/png" href="🤖">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,18 +12,18 @@
     <!-- NAV -->
     <nav class="navbar">
         <div class="nav-brand">🤖 IA Para Todos</div>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#que-es" class="nav-link main-nav-link" data-tab="tab-charla1" onclick="closeMenu(); openTab('tab-charla1')">¿Qué es la IA?</a></li>
-            <li><a href="#usos" class="nav-link main-nav-link" data-tab="tab-charla2" onclick="closeMenu(); openTab('tab-charla2')">Usos diarios</a></li>
-            <li><a href="#riesgos" class="nav-link main-nav-link" data-tab="tab-charla3" onclick="closeMenu(); openTab('tab-charla3')">Riesgos</a></li>
-            <li><a href="#como-usar" class="nav-link main-nav-link" data-tab="tab-charla4" onclick="closeMenu(); openTab('tab-charla4')">Cómo usarla</a></li>
+            <li><a href="#que-es" class="nav-link main-nav-link" data-tab="tab-charla1">¿Qué es la IA?</a></li>
+            <li><a href="#usos" class="nav-link main-nav-link" data-tab="tab-charla2">Usos diarios</a></li>
+            <li><a href="#riesgos" class="nav-link main-nav-link" data-tab="tab-charla3">Riesgos</a></li>
+            <li><a href="#como-usar" class="nav-link main-nav-link" data-tab="tab-charla4">Cómo usarla</a></li>
         </ul>
     </nav>
 
-    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+    <div class="overlay" id="overlay"></div>
 
     <!-- HERO -->
     <header class="hero" id="hero-section">
@@ -31,7 +31,7 @@
             <div class="badge">CHARLA 1</div>
             <h1>¿QUÉ ES LA<br><span class="accent">INTELIGENCIA<br>ARTIFICIAL?</span></h1>
             <p class="hero-sub">Aprende sobre la tecnología que está cambiando el mundo — de forma sencilla y práctica.</p>
-            <a href="#que-es" class="btn-hero" onclick="openTab('tab-charla1')">Comenzar ↓</a>
+            <a href="#" class="btn-hero" id="heroBtn">Comenzar ↓</a>
         </div>
         <div class="hero-deco">🤖</div>
     </header>
@@ -61,7 +61,7 @@
                 <p>"Así como una persona aprende viendo y practicando, la IA aprende con información."</p>
             </div>
             <p style="text-align: center; margin-top: 28px;">
-                <a href="#tab-charla1" class="btn-hero" style="background: var(--purple); color: var(--white);" onclick="openTab('tab-charla1')">Ver contenido completo de la Charla 1 →</a>
+                <a href="#" class="btn-hero" style="background: var(--purple); color: var(--white);" data-open-tab="tab-charla1">Ver contenido completo de la Charla 1 →</a>
             </p>
         </div>
     </section>
@@ -106,7 +106,7 @@
                 <p>"Una persona puede usar IA para hacer un currículum o promocionar un negocio."</p>
             </div>
             <p style="text-align: center; margin-top: 28px;">
-                <a href="#tab-charla2" class="btn-hero" style="background: var(--purple); color: var(--white);" onclick="openTab('tab-charla2')">Ver contenido completo de la Charla 2 →</a>
+                <a href="#" class="btn-hero" style="background: var(--purple); color: var(--white);" data-open-tab="tab-charla2">Ver contenido completo de la Charla 2 →</a>
             </p>
         </div>
     </section>
@@ -147,7 +147,7 @@
                 <p>"La IA es una herramienta, depende de cómo la uses."</p>
             </div>
             <p style="text-align: center; margin-top: 28px;">
-                <a href="#tab-charla3" class="btn-hero" style="background: var(--purple); color: var(--white);" onclick="openTab('tab-charla3')">Ver contenido completo de la Charla 3 →</a>
+                <a href="#" class="btn-hero" style="background: var(--purple); color: var(--white);" data-open-tab="tab-charla3">Ver contenido completo de la Charla 3 →</a>
             </p>
         </div>
     </section>
@@ -181,7 +181,7 @@
                 <li>📖 Aprender cosas nuevas</li>
             </ul>
             <p style="text-align: center; margin-top: 28px;">
-                <a href="#tab-charla4" class="btn-hero" style="background: var(--purple); color: var(--white);" onclick="openTab('tab-charla4')">Ver contenido completo de la Charla 4 →</a>
+                <a href="#" class="btn-hero" style="background: var(--purple); color: var(--white);" data-open-tab="tab-charla4">Ver contenido completo de la Charla 4 →</a>
             </p>
         </div>
     </section>
@@ -190,7 +190,7 @@
     <!-- Pestaña Charla 1 -->
     <div class="tab-content" id="tab-charla1">
         <div class="section-inner">
-            <a href="#que-es" class="back-btn" onclick="closeTab('tab-charla1')">← Volver a la página principal</a>
+            <a href="#" class="back-btn" data-close-tab="tab-charla1">← Volver a la página principal</a>
             <div class="content-header">
                 <div class="badge-large">CONTENIDO COMPLETO · CHARLA 1</div>
                 <h2>¿Qué es la Inteligencia Artificial?</h2>
@@ -256,7 +256,7 @@
     <!-- Pestaña Charla 2 -->
     <div class="tab-content" id="tab-charla2">
         <div class="section-inner">
-            <a href="#usos" class="back-btn" onclick="closeTab('tab-charla2')">← Volver a la página principal</a>
+            <a href="#" class="back-btn" data-close-tab="tab-charla2">← Volver a la página principal</a>
             <div class="content-header">
                 <div class="badge-large">CONTENIDO COMPLETO · CHARLA 2</div>
                 <h2>Usos de la IA en la Vida Diaria</h2>
@@ -333,7 +333,7 @@
     <!-- Pestaña Charla 3 -->
     <div class="tab-content" id="tab-charla3">
         <div class="section-inner">
-            <a href="#riesgos" class="back-btn" onclick="closeTab('tab-charla3')">← Volver a la página principal</a>
+            <a href="#" class="back-btn" data-close-tab="tab-charla3">← Volver a la página principal</a>
             <div class="content-header">
                 <div class="badge-large">CONTENIDO COMPLETO · CHARLA 3</div>
                 <h2>Riesgos y Uso Responsable de la IA</h2>
@@ -398,7 +398,7 @@
     <!-- Pestaña Charla 4 -->
     <div class="tab-content" id="tab-charla4">
         <div class="section-inner">
-            <a href="#como-usar" class="back-btn" onclick="closeTab('tab-charla4')">← Volver a la página principal</a>
+            <a href="#" class="back-btn" data-close-tab="tab-charla4">← Volver a la página principal</a>
             <div class="content-header">
                 <div class="badge-large">CONTENIDO COMPLETO · CHARLA 4</div>
                 <h2>Cómo Usar la IA Paso a Paso</h2>
