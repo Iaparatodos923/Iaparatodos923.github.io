@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Cascajal – Inteligencia Artificial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="nav-brand">🤖 IA Para Todos</div>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#que-es" class="nav-link main-nav-link" data-tab="tab-charla1" onclick="closeMenu(); openTab('tab-charla1')">¿Qué es la IA?</a></li>
+            <li><a href="#usos" class="nav-link main-nav-link" data-tab="tab-charla2" onclick="closeMenu(); openTab('tab-charla2')">Usos diarios</a></li>
+            <li><a href="#riesgos" class="nav-link main-nav-link" data-tab="tab-charla3" onclick="closeMenu(); openTab('tab-charla3')">Riesgos</a></li>
+            <li><a href="#como-usar" class="nav-link main-nav-link" data-tab="tab-charla4" onclick="closeMenu(); openTab('tab-charla4')">Cómo usarla</a></li>
+        </ul>
+    </nav>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <!-- HERO -->
+    <header class="hero" id="hero-section">
+        <div class="hero-inner">
+            <div class="badge">CHARLA 1</div>
+            <h1>¿QUÉ ES LA<br><span class="accent">INTELIGENCIA<br>ARTIFICIAL?</span></h1>
+            <p class="hero-sub">Aprende sobre la tecnología que está cambiando el mundo — de forma sencilla y práctica.</p>
+            <a href="#que-es" class="btn-hero" onclick="openTab('tab-charla1')">Comenzar ↓</a>
+        </div>
+        <div class="hero-deco">🤖</div>
+    </header>
+
+    <!-- SECCIÓN 1 (resumen) -->
+    <section id="que-es" class="section">
+        <div class="section-inner">
+            <div class="section-tag">CHARLA 1</div>
+            <h2>¿Qué es la Inteligencia Artificial?</h2>
+            <p class="section-goal">🎯 <strong>Objetivo:</strong> Que la comunidad entienda qué es la IA de forma sencilla.</p>
+            <div class="highlight-box">
+                <p>La inteligencia artificial (IA) es una tecnología que permite que las máquinas <strong>"piensen"</strong> o realicen tareas como humanos.</p>
+            </div>
+            <h3>📱 Ejemplos simples</h3>
+            <ul class="icon-list">
+                <li>📷 Cuando el celular reconoce tu cara</li>
+                <li>▶️ Cuando YouTube recomienda videos</li>
+                <li>🔍 Cuando Google responde preguntas</li>
+            </ul>
+            <h3>⚠️ Aclaración importante</h3>
+            <div class="two-col">
+                <div class="pill pill-red">❌ No es un robot con sentimientos</div>
+                <div class="pill pill-green">✅ Es un programa que aprende de datos</div>
+            </div>
+            <div class="quote-box">
+                <span class="quote-icon">💡</span>
+                <p>"Así como una persona aprende viendo y practicando, la IA aprende con información."</p>
+            </div>
+            <p style="text-align: center; margin-top: 28px;">
+                <a href="#tab-charla1" class="btn-hero" style="background: var(--purple); color: var(--white);" onclick="openTab('tab-charla1')">Ver contenido completo de la Charla 1 →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2 (resumen) -->
+    <section id="usos" class="section section-alt">
+        <div class="section-inner">
+            <div class="section-tag">CHARLA 2</div>
+            <h2>Usos de la IA en la Vida Diaria</h2>
+            <p class="section-goal">🎯 <strong>Objetivo:</strong> Mostrar que la IA sí sirve en la vida cotidiana.</p>
+            <div class="cards-grid">
+                <div class="mini-card">
+                    <div class="mini-icon">📱</div>
+                    <h3>En el celular</h3>
+                    <ul>
+                        <li>Asistentes de voz (Google, Siri)</li>
+                        <li>Traducción de idiomas</li>
+                        <li>Fotos automáticas</li>
+                    </ul>
+                </div>
+                <div class="mini-card">
+                    <div class="mini-icon">📚</div>
+                    <h3>En educación</h3>
+                    <ul>
+                        <li>Buscar información</li>
+                        <li>Explicar tareas</li>
+                        <li>Ayudar a estudiar</li>
+                    </ul>
+                </div>
+                <div class="mini-card">
+                    <div class="mini-icon">💼</div>
+                    <h3>En trabajo / emprendimiento</h3>
+                    <ul>
+                        <li>Crear textos</li>
+                        <li>Diseñar imágenes</li>
+                        <li>Hacer publicidad</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="quote-box">
+                <span class="quote-icon">💡</span>
+                <p>"Una persona puede usar IA para hacer un currículum o promocionar un negocio."</p>
+            </div>
+            <p style="text-align: center; margin-top: 28px;">
+                <a href="#tab-charla2" class="btn-hero" style="background: var(--purple); color: var(--white);" onclick="openTab('tab-charla2')">Ver contenido completo de la Charla 2 →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3 (resumen) -->
+    <section id="riesgos" class="section">
+        <div class="section-inner">
+            <div class="section-tag">CHARLA 3</div>
+            <h2>Riesgos y Uso Responsable de la IA</h2>
+            <p class="section-goal">🎯 <strong>Objetivo:</strong> Evitar que la comunidad sea engañada o malinformada.</p>
+            <div class="info-grid">
+                <div class="info-box danger">
+                    <h3>⚠️ Riesgos</h3>
+                    <ul>
+                        <li>Noticias falsas</li>
+                        <li>Estafas por internet</li>
+                        <li>Información incorrecta</li>
+                    </ul>
+                </div>
+                <div class="info-box caution">
+                    <h3>🛡️ Cosas importantes</h3>
+                    <ul>
+                        <li>No creer todo lo que ves</li>
+                        <li>No compartir datos personales</li>
+                        <li>Verificar información</li>
+                    </ul>
+                </div>
+                <div class="info-box ethics">
+                    <h3>✅ Uso ético</h3>
+                    <ul>
+                        <li>No usar IA para engañar</li>
+                        <li>No copiar trabajos sin entender</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="quote-box">
+                <span class="quote-icon">💡</span>
+                <p>"La IA es una herramienta, depende de cómo la uses."</p>
+            </div>
+            <p style="text-align: center; margin-top: 28px;">
+                <a href="#tab-charla3" class="btn-hero" style="background: var(--purple); color: var(--white);" onclick="openTab('tab-charla3')">Ver contenido completo de la Charla 3 →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4 (resumen) -->
+    <section id="como-usar" class="section section-alt">
+        <div class="section-inner">
+            <div class="section-tag">CHARLA 4</div>
+            <h2>Cómo Usar la IA Paso a Paso</h2>
+            <p class="section-goal">🎯 <strong>Objetivo:</strong> Que las personas aprendan a usarla de verdad.</p>
+            <h3>🗣️ Cómo hacer preguntas</h3>
+            <ul class="icon-list">
+                <li>🗣️ Hablar claro</li>
+                <li>🎯 Ser específico</li>
+            </ul>
+            <h3>Ejemplo práctico</h3>
+            <div class="example-compare">
+                <div class="example-bad">
+                    <span class="ex-label">❌ Mal ejemplo</span>
+                    <p>"Explícame algo"</p>
+                </div>
+                <div class="example-good">
+                    <span class="ex-label">✅ Buen ejemplo</span>
+                    <p>"Explícame qué es la IA como si fuera un niño"</p>
+                </div>
+            </div>
+            <h3>🛠️ Usos prácticos</h3>
+            <ul class="icon-list">
+                <li>✉️ Escribir mensajes</li>
+                <li>🔍 Buscar información</li>
+                <li>📖 Aprender cosas nuevas</li>
+            </ul>
+            <p style="text-align: center; margin-top: 28px;">
+                <a href="#tab-charla4" class="btn-hero" style="background: var(--purple); color: var(--white);" onclick="openTab('tab-charla4')">Ver contenido completo de la Charla 4 →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== PESTAÑAS DE CONTENIDO DETALLADO ==================== -->
+    <!-- Pestaña Charla 1 -->
+    <div class="tab-content" id="tab-charla1">
+        <div class="section-inner">
+            <a href="#que-es" class="back-btn" onclick="closeTab('tab-charla1')">← Volver a la página principal</a>
+            <div class="content-header">
+                <div class="badge-large">CONTENIDO COMPLETO · CHARLA 1</div>
+                <h2>¿Qué es la Inteligencia Artificial?</h2>
+                <p class="subtitle">Todo lo que necesitas saber para entender esta tecnología que está cambiando el mundo.</p>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🧠</span> Definición sencilla</h3>
+                <p>La inteligencia artificial es como enseñarle a una computadora a hacer cosas que normalmente hacemos los humanos: reconocer imágenes, entender lenguaje, tomar decisiones o resolver problemas. No es magia, es matemáticas y muchos datos.</p>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">📚</span> ¿Cómo aprende la IA?</h3>
+                <p>Imagina que quieres enseñarle a un niño a reconocer perros. Le muestras muchas fotos de perros y le dices "esto es un perro". Con el tiempo, el niño aprende. La IA funciona igual: le damos miles de ejemplos y ella encuentra patrones.</p>
+                <div class="info-highlight">
+                    <h3>🔑 Dato clave</h3>
+                    <p>La IA no "piensa" como nosotros. Solo sigue patrones que encontró en los datos con los que fue entrenada. Es como una calculadora muy avanzada, no como un cerebro humano.</p>
+                </div>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🤖</span> Tipos de IA que usamos hoy</h3>
+                <ul>
+                    <li><strong>IA conversacional:</strong> Como ChatGPT, que puede hablar contigo y responder preguntas.</li>
+                    <li><strong>Reconocimiento de imágenes:</strong> Como cuando tu celular sabe quién eres con tu cara.</li>
+                    <li><strong>Recomendaciones:</strong> Lo que usa YouTube o Netflix para sugerirte videos.</li>
+                    <li><strong>Traducción automática:</strong> Como el traductor de Google.</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">❓</span> Mitos comunes sobre la IA</h3>
+                <ul>
+                    <li><strong>Mito:</strong> "La IA se va a volver consciente y dominar el mundo." <br><strong>Realidad:</strong> La IA actual no tiene conciencia ni emociones. Solo ejecuta tareas para las que fue programada.</li>
+                    <li><strong>Mito:</strong> "La IA siempre tiene la razón." <br><strong>Realidad:</strong> La IA puede equivocarse y dar información falsa. Siempre hay que verificar.</li>
+                    <li><strong>Mito:</strong> "La IA va a reemplazar a todos los trabajos." <br><strong>Realidad:</strong> La IA cambia la forma de trabajar, pero también crea nuevas oportunidades.</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🔍</span> ¿Cómo funciona la IA por dentro? (versión muy sencilla)</h3>
+                <p><strong>No es magia, es como aprender a cocinar:</strong> Si quieres que una máquina reconozca un gato, le muestras miles de fotos de gatos y le dices “esto es un gato”. Con el tiempo, ella sola empieza a encontrar patrones (bigotes, orejas puntiagudas, cola). Lo mismo pasa con la IA que usas en el celular.</p>
+                <p><strong>Dato curioso:</strong> La IA necesita mucha información para aprender. Por eso, mientras más usas el teclado predictivo de tu celular, mejor adivina lo que vas a escribir.</p>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🗣️</span> Preguntas frecuentes (basadas en dudas reales)</h3>
+                <ul>
+                    <li><strong>P: ¿La IA me va a robar mi trabajo?</strong><br>R: No necesariamente. La IA es una herramienta, como lo fue la calculadora o el internet. Los trabajos cambian, pero también aparecen otros nuevos. Lo importante es aprender a usarla a tu favor.</li>
+                    <li><strong>P: ¿Necesito saber programar para usar IA?</strong><br>R: ¡No! Así como no necesitas ser mecánico para manejar un carro, no necesitas ser programador para usar ChatGPT o el asistente de Google.</li>
+                    <li><strong>P: ¿La IA puede sentir emociones o enamorarse?</strong><br>R: No. La IA solo imita el lenguaje humano. No tiene corazón, ni conciencia, ni voluntad propia. Es como un loro que repite frases, pero más avanzado.</li>
+                </ul>
+            </div>
+            <div class="info-highlight">
+                <h3>📊 Dato de nuestra comunidad (diagnóstico 2025)</h3>
+                <p>En Cascajal, el 67% de las personas había escuchado hablar de IA, pero solo el 20% dijo tener mucho conocimiento. Esto significa que <strong>la mayoría estamos empezando a aprender juntos</strong>. ¡Tú también puedes!</p>
+            </div>
+            <div class="tip-box">
+                <strong>💡 Para recordar:</strong> La IA es una herramienta creada por humanos para ayudarnos. No es buena ni mala: todo depende de cómo la usemos y para qué.
+            </div>
+            <div class="practice-area">
+                <h3>🧪 Actividad práctica: “Detective de IA en casa”</h3>
+                <p>Pídele a un familiar o vecino que te muestre su celular. Identifica al menos 3 cosas que usen IA (ejemplo: desbloqueo facial, el traductor de Google, las sugerencias de YouTube). Compártelo en tu grupo de WhatsApp comunitario.</p>
+                <div class="prompt-example">Ejemplo: "Encontré que mi celular usa IA para recomendar canciones en Spotify."</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pestaña Charla 2 -->
+    <div class="tab-content" id="tab-charla2">
+        <div class="section-inner">
+            <a href="#usos" class="back-btn" onclick="closeTab('tab-charla2')">← Volver a la página principal</a>
+            <div class="content-header">
+                <div class="badge-large">CONTENIDO COMPLETO · CHARLA 2</div>
+                <h2>Usos de la IA en la Vida Diaria</h2>
+                <p class="subtitle">Descubre cómo la inteligencia artificial ya está presente en tu día a día, aunque no te des cuenta.</p>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">📱</span> En tu celular</h3>
+                <ul>
+                    <li><strong>Asistentes virtuales:</strong> Google Assistant, Siri y Alexa usan IA para entender lo que dices y responder.</li>
+                    <li><strong>Teclado inteligente:</strong> El autocorrector y las sugerencias de palabras usan IA para adivinar qué quieres escribir.</li>
+                    <li><strong>Filtros de fotos:</strong> Las apps de cámara usan IA para mejorar automáticamente tus fotos.</li>
+                    <li><strong>Reconocimiento facial:</strong> Tu celular identifica tu rostro gracias a algoritmos de IA.</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">📚</span> Para estudiar y aprender</h3>
+                <ul>
+                    <li><strong>Explicar temas difíciles:</strong> Pregúntale a una IA que te explique matemáticas, historia o ciencia de forma sencilla.</li>
+                    <li><strong>Resumir textos largos:</strong> La IA puede condensar artículos o libros en párrafos cortos.</li>
+                    <li><strong>Practicar idiomas:</strong> Puedes conversar con una IA en inglés, francés o cualquier idioma para practicar.</li>
+                    <li><strong>Crear cuestionarios:</strong> Pídele que te haga preguntas sobre un tema para estudiar.</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">💼</span> Para trabajar o emprender</h3>
+                <ul>
+                    <li><strong>Crear textos profesionales:</strong> Correos, cartas, propuestas o publicaciones para redes sociales.</li>
+                    <li><strong>Diseñar logos e imágenes:</strong> Hay IAs que crean imágenes con solo describir lo que quieres.</li>
+                    <li><strong>Hacer publicidad:</strong> La IA puede ayudarte a escribir anuncios atractivos para vender productos.</li>
+                    <li><strong>Organizar tareas:</strong> Puedes pedirle que te ayude a planificar tu semana o tu presupuesto.</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🏠</span> En el hogar</h3>
+                <ul>
+                    <li><strong>Recetas de cocina:</strong> Dile qué ingredientes tienes y la IA te sugiere qué cocinar.</li>
+                    <li><strong>Planificar viajes:</strong> Puede ayudarte a buscar vuelos, hoteles y armar itinerarios.</li>
+                    <li><strong>Consejos de salud:</strong> Pregúntale sobre síntomas (¡pero siempre consulta a un médico!).</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🏘️</span> Usos específicos para Cascajal</h3>
+                <ul>
+                    <li><strong>Para el Consejo Comunal:</strong> La IA puede ayudar a redactar cartas formales para solicitar mejoras (agua, asfalto, recolección de basura). Solo hay que darle la idea y ella propone un borrador.</li>
+                    <li><strong>Para emprendedores locales (panadería La Reyna, bodegón El Peruano, etc.):</strong> Pueden usar IA para crear publicidad para redes sociales, diseñar menús o responder preguntas frecuentes de los clientes.</li>
+                    <li><strong>Para estudiantes de la U.E. Alberto Sanabria:</strong> Pueden pedirle a la IA que les explique un tema de matemáticas o ciencias con ejemplos de la vida cotidiana.</li>
+                    <li><strong>Para adultos mayores:</strong> Pueden usar el asistente de voz del celular para enviar mensajes sin tener que escribir, o para recordar tomar sus medicamentos.</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">📶</span> Herramientas que funcionan sin internet (parcialmente)</h3>
+                <ul>
+                    <li><strong>Google Translate (modo offline):</strong> Puedes descargar un idioma y traducir sin conexión.</li>
+                    <li><strong>Asistente de Google:</strong> Algunas funciones básicas (como alarmas) funcionan sin datos.</li>
+                    <li><strong>Aplicaciones de dictado de voz:</strong> Gracias a la IA, tu celular puede convertir voz a texto aunque no tengas internet (depende del modelo).</li>
+                </ul>
+            </div>
+            <div class="info-highlight">
+                <h3>📊 Dato motivador de Cascajal</h3>
+                <p>El 100% de las personas encuestadas en nuestra comunidad quiere aprender sobre IA. ¡Eso es una gran motivación! No están solos; estamos en esto juntos.</p>
+            </div>
+            <div class="tip-box">
+                <strong>💡 Para recordar:</strong> La IA no reemplaza a las personas. Es una ayuda, como una calculadora o un diccionario. La decisión final siempre la tienes tú.
+            </div>
+            <div class="practice-area">
+                <h3>🧪 Actividad: “Mi primer prompt útil”</h3>
+                <p>Escribe en cualquier IA (ChatGPT, Gemini, etc.):</p>
+                <div class="prompt-example">"Ayúdame a redactar un mensaje de WhatsApp para invitar a mis vecinos a una reunión para pedir la reparación de la calle. Tono amable y corto."</div>
+                <p style="margin-top: 12px;">Luego comparte el resultado en tu grupo comunitario. Verás que la IA puede ser una aliada para la organización vecinal.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pestaña Charla 3 -->
+    <div class="tab-content" id="tab-charla3">
+        <div class="section-inner">
+            <a href="#riesgos" class="back-btn" onclick="closeTab('tab-charla3')">← Volver a la página principal</a>
+            <div class="content-header">
+                <div class="badge-large">CONTENIDO COMPLETO · CHARLA 3</div>
+                <h2>Riesgos y Uso Responsable de la IA</h2>
+                <p class="subtitle">Aprende a identificar peligros y a usar la inteligencia artificial de forma ética y segura.</p>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">⚠️</span> Principales riesgos</h3>
+                <ul>
+                    <li><strong>Noticias falsas (fake news):</strong> La IA puede crear noticias, fotos y videos falsos que parecen reales. Esto se llama "deepfake" y puede engañar a muchas personas.</li>
+                    <li><strong>Estafas y fraudes:</strong> Hay personas que usan IA para clonar voces, crear mensajes falsos o hacerse pasar por alguien más para robar información o dinero.</li>
+                    <li><strong>Información incorrecta:</strong> A veces la IA inventa datos o da respuestas que suenan bien pero son falsas. Esto se conoce como "alucinaciones" de la IA.</li>
+                    <li><strong>Privacidad:</strong> Algunas aplicaciones recopilan datos personales sin que lo sepamos. La IA puede usar esos datos de formas que no imaginamos.</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🎭</span> ¿Qué son los “deepfakes” y por qué deberían importarnos?</h3>
+                <p>Los deepfakes son videos o audios falsos creados con IA que parecen reales. Ejemplo: Alguien podría hacer un video donde un político dice algo que nunca dijo. En nuestra comunidad, podrían usarlo para crear rumores o desinformación. <strong>Siempre verifica</strong> antes de creer o compartir.</p>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🚨</span> Señales de estafa con IA (comunes en Venezuela)</h3>
+                <ul>
+                    <li>Llamadas donde una voz (clonada por IA) dice ser tu familiar y pide dinero urgente. Cuelga y llama directamente a tu familiar.</li>
+                    <li>Mensajes de texto o WhatsApp ofreciendo “empleos fáciles” o “premios” que suenan demasiado buenos para ser verdad.</li>
+                    <li>Correos o mensajes que te piden hacer clic en un enlace para “verificar tu cuenta bancaria” o “actualizar tus datos”.</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🛡️</span> Guía de 3 pasos para protegerte</h3>
+                <ol style="list-style: decimal; margin-left: 20px;">
+                    <li><strong>Detente:</strong> Si algo te genera desconfianza, no actúes de inmediato.</li>
+                    <li><strong>Verifica:</strong> Busca la información en otro lugar (pregúntale a un familiar, consulta otra fuente, llama a la institución).</li>
+                    <li><strong>No compartas tus datos:</strong> Nunca des tu cédula, contraseñas, número de tarjeta de crédito o fotos íntimas a una IA o a un sitio desconocido.</li>
+                </ol>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">✅</span> Uso ético de la IA</h3>
+                <ul>
+                    <li><strong>No para engañar:</strong> No uses IA para crear información falsa, suplantar identidades o estafar a otros.</li>
+                    <li><strong>No para copiar sin entender:</strong> Si usas IA para una tarea o trabajo, asegúrate de aprender y no solo copiar y pegar.</li>
+                    <li><strong>Respeta a los demás:</strong> No uses IA para crear contenido ofensivo, discriminatorio o que dañe a otras personas.</li>
+                    <li><strong>Sé transparente:</strong> Si usaste IA para crear algo, es bueno decirlo. La honestidad construye confianza.</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🤝</span> Uso ético en comunidad</h3>
+                <ul>
+                    <li>Si alguien te pide que uses IA para hacer una tarea escolar, no copies y pegues sin entender. Usa la IA como un “maestro particular” que te explica, no como quien hace la tarea por ti.</li>
+                    <li>No uses IA para crear chismes o noticias falsas sobre tus vecinos. La tecnología debe unirnos, no separarnos.</li>
+                </ul>
+            </div>
+            <div class="tip-box">
+                <strong>💡 Para recordar:</strong> La tecnología no es buena ni mala por sí misma. Todo depende de cómo la usemos. Una persona informada es más difícil de engañar.
+            </div>
+            <div class="practice-area">
+                <h3>🧪 Actividad: “Verificador de noticias”</h3>
+                <p>Toma una noticia que haya circulado en tu grupo de WhatsApp esta semana. Busca si aparece en algún medio de noticias confiable (como el sitio web de un periódico nacional o una cuenta oficial de una institución). Si solo aparece en cadenas de WhatsApp, ¡cuidado! Puede ser falsa.</p>
+                <div class="prompt-example">Pregunta clave: ¿Aparece en otros medios? ¿Quién la escribió? ¿Tiene fuentes confiables?</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pestaña Charla 4 -->
+    <div class="tab-content" id="tab-charla4">
+        <div class="section-inner">
+            <a href="#como-usar" class="back-btn" onclick="closeTab('tab-charla4')">← Volver a la página principal</a>
+            <div class="content-header">
+                <div class="badge-large">CONTENIDO COMPLETO · CHARLA 4</div>
+                <h2>Cómo Usar la IA Paso a Paso</h2>
+                <p class="subtitle">Guía práctica para que cualquier persona pueda empezar a usar la inteligencia artificial hoy mismo.</p>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🗣️</span> Cómo hacer buenas preguntas (prompts)</h3>
+                <p>La clave para obtener buenas respuestas de una IA está en cómo le preguntas. A esto se le llama "prompt". Sigue estas reglas:</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-text">
+                            <h4>Sé claro y específico</h4>
+                            <p>En lugar de "háblame de animales", di "dame 5 datos curiosos sobre los delfines".</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-text">
+                            <h4>Indica el formato que quieres</h4>
+                            <p>Puedes pedir: "explícamelo en una lista", "escríbelo como un cuento", "dame un resumen de 3 párrafos".</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-text">
+                            <h4>Dale contexto</h4>
+                            <p>Di para qué lo necesitas: "necesito una carta formal para pedir trabajo" o "explícamelo como si fuera un niño".</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-text">
+                            <h4>Puedes pedirle que mejore la respuesta</h4>
+                            <p>Si no te gusta la respuesta, dile: "explícalo más sencillo", "más corto" o "dame otro ejemplo".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🚀</span> Técnicas avanzadas para sacarle más provecho</h3>
+                <ul>
+                    <li><strong>Dale un “rol” a la IA:</strong> “Actúa como un profesor de primaria y explícame qué es la fotosíntesis.”</li>
+                    <li><strong>Pídele que te haga preguntas a ti:</strong> “Hazme 5 preguntas para saber si entendí qué es la IA.”</li>
+                    <li><strong>Usa el formato que quieras:</strong> “Dame la receta del pan como si fuera una lista con viñetas.”</li>
+                    <li><strong>Corrige y mejora:</strong> “Eso no me sirvió, explícalo más corto. Usa ejemplos de la vida en el barrio.”</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">✉️</span> Ejemplos prácticos de uso</h3>
+                <ul>
+                    <li><strong>Escribir un mensaje:</strong> "Ayúdame a redactar un mensaje para invitar a mis vecinos a una reunión comunitaria."</li>
+                    <li><strong>Buscar información:</strong> "¿Cuáles son los beneficios de tomar agua? Dame una lista con 5 puntos."</li>
+                    <li><strong>Aprender algo nuevo:</strong> "Enséñame a hacer una multiplicación de dos cifras paso a paso."</li>
+                    <li><strong>Resolver dudas:</strong> "¿Qué significa la palabra 'sostenible'? Explícamelo con ejemplos."</li>
+                    <li><strong>Planificar:</strong> "Ayúdame a hacer un menú semanal con comidas saludables y económicas."</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">🛠️</span> Herramientas gratuitas que puedes usar</h3>
+                <ul>
+                    <li><strong>ChatGPT:</strong> Para conversar, hacer preguntas y crear textos. (chat.openai.com o la app)</li>
+                    <li><strong>Google Gemini:</strong> Similar a ChatGPT, integrado con Google. (gemini.google.com)</li>
+                    <li><strong>Traductor de Google:</strong> Usa IA para traducir entre idiomas.</li>
+                    <li><strong>Canva:</strong> Tiene herramientas de IA para diseñar imágenes y presentaciones.</li>
+                    <li><strong>Asistente de Google / Siri:</strong> Ya vienen en la mayoría de los celulares.</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">📱</span> ¿Cómo empezar si nunca has usado una IA?</h3>
+                <p><strong>Opción más fácil:</strong> Usa el asistente de Google en tu celular (basta con decir “Ok Google” o mantener presionado el botón de inicio). Pregunta cosas como: “¿Qué tiempo hará mañana?”, “Pon una alarma a las 7 am.”, “¿Quién fue Simón Bolívar?”</p>
+                <p><strong>Opción para texto (ChatGPT o Gemini):</strong> Puedes entrar desde el navegador de tu celular o computadora. No necesitas instalar nada. Solo escribe tu pregunta.</p>
+            </div>
+            <div class="info-highlight">
+                <h3>🧠 Recordatorio del proyecto (Modelo TAM)</h3>
+                <p>Las personas usamos tecnología cuando sentimos que es <strong>útil</strong> y <strong>fácil</strong> de usar. Por eso, empieza con algo que ya te sirva hoy: pedir una receta, redactar un mensaje, o explicar un tema difícil. Con la práctica se vuelve más fácil.</p>
+            </div>
+            <div class="content-card">
+                <h3><span class="card-icon">📖</span> Errores comunes al usar IA</h3>
+                <ul>
+                    <li><strong>Preguntas muy vagas:</strong> "Dime algo" no sirve. Sé específico.</li>
+                    <li><strong>Creer todo sin verificar:</strong> La IA a veces inventa. Siempre confirma la información importante.</li>
+                    <li><strong>No probar de nuevo:</strong> Si la respuesta no te gusta, reformula la pregunta o pide cambios.</li>
+                    <li><strong>Compartir datos sensibles:</strong> No des información personal, contraseñas o datos bancarios.</li>
+                </ul>
+            </div>
+            <div class="tip-box">
+                <strong>💡 Para recordar:</strong> Practicar es la mejor forma de aprender. Entre más uses la IA, mejor entenderás cómo sacarle provecho. No tengas miedo de experimentar.
+            </div>
+            <div class="practice-area">
+                <h3>🧪 Actividad final: “Mi diario de aprendizaje en IA”</h3>
+                <p>Durante una semana, cada vez que uses una IA (aunque sea el corrector del celular), anota qué hiciste y qué te pareció. Al final de la semana comparte tu experiencia con algún vecino. Verás que todos aprendemos mejor cuando compartimos.</p>
+                <div class="prompt-example">Ejemplo: "El lunes usé el asistente de Google para recordar mi lista de compras. Me ahorró tiempo."</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🌱 Página creada para fomentar el conocimiento sobre la IA en la comunidad de Cascajal. Basado en el proyecto sociotecnológico UPTOS 2025.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
